@@ -20,7 +20,7 @@ class Displayer:
         self.draw = ImageDraw.Draw(self.im, 'RGBA')
         self.page_height = size.height()
         self.page_width = size.width()
-        self.font = ImageFont.truetype("/Library/Fonts/Arial.ttf", 8)
+        self.font = ImageFont.load_default()
 
     def draw_elements(self, element_list: List[Rectangle], color: Optional[Tuple]=None, outline: Optional[Tuple]=None):
 
