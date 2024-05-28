@@ -91,5 +91,5 @@ def get_elements_from_pdf(file_path: str, detected_areas: Union[None, Dict[int, 
 def visualise_pdf_output(pdf_path: str, output_path: str, force_ocr: bool = False, **kwargs):
     pages = get_pdf_pages(pdf_path, None, force_ocr, **kwargs)
     for page_index, p in enumerate(pages):
-        page_elements = p.extract_text_and_tables(**kwargs)
+        page_elements = p.extract_tables(**kwargs)
         visualise_elements(p, page_elements, output_path)
